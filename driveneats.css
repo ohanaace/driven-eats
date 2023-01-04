@@ -1,0 +1,108 @@
+#container{
+    width: 414px;
+margin-top: 92px;
+margin-bottom: 92px;
+}
+
+header{
+    width: 414px;
+    background-color: #CF2B2B;
+    height: 92px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+h1{
+    font-family: 'righteous', cursive;
+    font-size: 44px;
+    margin-top: 5px;
+}
+h2{
+    font-family: 'roboto', sans-serif;
+    font-size: 14px;
+    margin-top: 8px;
+}
+h1, h2{
+    color: #ffffff;
+    font-weight: 400;
+margin-left: 21px;
+
+}
+main{
+    height: 100vh;
+    background-color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+
+}
+main div{
+    display: flex;
+
+    gap: 19px;
+}
+
+h3{
+    margin: 30px 145px 17px 19px;
+    color: #333333;
+    font-family: 'righteous', cursive;
+    font-weight: 400;
+    font-size: 26px;
+}
+h4{
+    font-family: 'roboto', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #333333;
+}
+h5{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+p{
+    font-family: 'roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #A6A6A6;
+}
+img{
+width: 144px;
+height: 87px;
+border-radius: 4px;
+align-self: center;
+}
+.opcao-menu{
+    background-color: #ffffff;
+    width: 172px;
+    height: 216px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+.botao{
+    background-color: #ffffff;
+    width: 414px;
+    height: 92px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    background-color: #CBCBCB;
+    font-family: 'roboto', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    width: 364px;
+    height: 61px;
+    border-radius: 50px;
+}
