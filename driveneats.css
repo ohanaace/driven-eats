@@ -3,6 +3,9 @@
 margin-top: 92px;
 margin-bottom: 92px;
 }
+*{
+    box-sizing: border-box;
+}
 
 header{
     width: 414px;
@@ -36,10 +39,10 @@ main{
     overflow-x: scroll;
 
 }
-main div{
+section{
     display: flex;
-
-    gap: 19px;
+    margin-left: 19px;
+    gap: 16px;
 }
 
 h3{
@@ -70,20 +73,27 @@ p{
 img{
 width: 144px;
 height: 87px;
-border-radius: 4px;
+padding-left: 6px;
+padding-right: 6px;
+border-radius: 10px;
 align-self: center;
 }
-.opcao-menu{
+nav, .menu{
     background-color: #ffffff;
-    width: 172px;
+    width: 252px;
     height: 216px;
     border-radius: 9px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 8px;
+    box-shadow: 0 0 2px 1px  rgba(0, 0, 10, 0.25);;
+    
 }
-.botao{
+.selecionado{
+    box-shadow: 0px 0px 10px -4px, inset 0px 0px 0px 5px #32B72F;
+}
+footer{
     background-color: #ffffff;
     width: 414px;
     height: 92px;
@@ -105,4 +115,5 @@ button{
     width: 364px;
     height: 61px;
     border-radius: 50px;
+    border: none
 }
