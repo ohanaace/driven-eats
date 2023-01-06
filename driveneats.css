@@ -78,7 +78,7 @@ padding-right: 6px;
 border-radius: 10px;
 align-self: center;
 }
-nav, .menu{
+nav{
     background-color: #ffffff;
     width: 252px;
     height: 216px;
@@ -93,6 +93,17 @@ nav, .menu{
 .selecionado{
     box-shadow: 0px 0px 10px -4px, inset 0px 0px 0px 5px #32B72F;
 }
+.selecionado ion-icon {
+    color: green
+}
+.preco{
+    display: flex;
+    justify-content: space-between;
+}
+.check{
+    display: none;
+}
+
 footer{
     background-color: #ffffff;
     width: 414px;

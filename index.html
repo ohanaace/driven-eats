@@ -17,21 +17,21 @@
 
             <main>
                 <h3>Primeiro, seu prato</h3>
-                <section>
+                <section class="food">
                     
-                    <nav>
+                    <nav onclick="selecionaPrato(this)">
                         <img src="https://www.confeiteiradesucesso.com/wp-content/uploads/2019/03/hamburguergourmet-fb.jpg"/>
                     <h4>Gourmet</h4>
                     <p>Carne suculenta e pão artesanal</p>
                     <h5>R$ 50,00</h5>
                     </nav>
-                    <nav>
+                    <nav onclick="selecionaPrato(this)">
                         <img src="https://www.confeiteiradesucesso.com/wp-content/uploads/2019/03/hamburguergourmet-fb.jpg"/>
                     <h4>Podrão</h4>
                     <p>Carne suculenta, turbinado com tudo</p>
                     <h5>R$ 55,00</h5>
                     </nav>
-                    <nav>
+                    <nav onclick="selecionaPrato(this)">
                         <img src="https://www.confeiteiradesucesso.com/wp-content/uploads/2019/03/hamburguergourmet-fb.jpg"/>
                     <h4>Vegano</h4>
                     <p>Ninguém diz que não é carne</p>
@@ -40,21 +40,21 @@
                     
                 </section>
                 <h3>Agora, sua bebida</h3>
-                <section>
+                <section class="drink">
               
-                    <nav>
+                    <nav onclick="selecionaDrink(this)">
                         <img src="https://bighiper.vtexassets.com/arquivos/ids/162669-800-450?v=637392349225430000&width=800&height=450&aspect=true"/>
                     <h4>Monster Drink</h4>
                     <p>Bebida de Taurina</p>
                     <h5>R$ 10,00</h5>
                     </nav>
-                    <nav>
+                    <nav onclick="selecionaDrink(this)">
                         <img src="https://images.tcdn.com.br/img/img_prod/887622/energetico_monster_ultra_branco_473ml_2333_1_20201124111458.jpg"/>
                     <h4>Monster Branco</h4>
                     <p>Bebida de Taurina</p>
                     <h5>R$ 13,00</h5>
                     </nav>
-                    <nav>
+                    <nav onclick="selecionaDrink(this)">
                         <img src="https://uploads.metropoles.com/wp-content/uploads/2019/07/24162652/WhatsApp-Image-2019-07-24-at-16.22.48-600x400.jpeg"/>
                     <h4>Monster Azul</h4>
                     <p>Bebida de Taurina</p>
@@ -63,24 +63,34 @@
                     
                 </section>
                 <h3>Por fim, sua sobremesa</h3>
-                <section>
-                    <nav>
+                <section class="dessert">
+                    <nav onclick="selecionaSobremesa(this)">
                         <img src="https://i.pinimg.com/736x/bf/09/40/bf09402e8d1c713256637d1773fdd897.jpg"/>
                     <h4>Açaí completo 300ml</h4>
                     <p>Açaí recheado</p>
                     <h5>R$ 15,00</h5>
                     </nav>
-                    <nav>
+                    <nav onclick="selecionaSobremesa(this)">
                         <img src="https://i.pinimg.com/736x/bf/09/40/bf09402e8d1c713256637d1773fdd897.jpg"/>
                     <h4>Açaí completo 450ml</h4>
                     <p>Açaí recheado</p>
-                    <h5>R$ 20,00</h5>
+                        <div class="preco">
+                        <h5>R$ 20,00</h5>
+                        <div class="check">
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                            </div>
+                        </div>
                     </nav>
-                    <nav>
+                    <nav onclick="selecionaSobremesa(this)">
                         <img src="https://i.pinimg.com/736x/bf/09/40/bf09402e8d1c713256637d1773fdd897.jpg"/>
                     <h4>Açaí completo 500ml</h4>
                     <p>Açaí recheado</p>
-                    <h5>R$ 25,00</h5>
+                    <div class="preco"><h5>R$ 25,00</h5>
+                        <div class="check">
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                                </div>
+                    </div>
+                    
                     </nav>
                 </section>
                 <footer>
@@ -89,6 +99,7 @@
             </main>
 
         </div>
-
+        <script src="driveneats.js"></script>
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     </body>
 </html>
