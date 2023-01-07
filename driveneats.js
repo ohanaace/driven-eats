@@ -8,7 +8,7 @@
     function selecionaPrato(divNoThis){
     const pratoAnterior = document.querySelector('.food .selecionado')
     console.log(divNoThis.children[1].innerHTML);
-    console.log(parseInt(divNoThis.children[3].children[0].innerHTML.replace('R$ ', '')))
+    precodoPrato = parseInt(divNoThis.children[3].children[0].innerHTML.replace('R$ ', ''));
     if(pratoAnterior !== null){
         pratoAnterior.classList.remove('selecionado')
     }
