@@ -76,7 +76,7 @@ function mandarPedido(){
     \n - *Prato*: ${nomeDoPrato}
     \n - *Bebida*: ${nomeDoDrink}
     \n - *Sobremesa*: ${nomeDaSobremesa}
-    \n *Total*: R$ ${valorTotal},00 `
+    \n Total: R$ ${valorTotal},00 `
     mensagemCodificada = encodeURI(mensagem);
     enviar()
 }
