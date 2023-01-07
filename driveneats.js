@@ -2,6 +2,8 @@
     let prato;
     let drink;
     let sobremesa;
+    let checkAtual;
+    let checkAnterior
     let precoDoPrato;
     let precoDoDrink;
     let precoDaSobremesa;
@@ -13,12 +15,15 @@
     let mensagemCodificada;
 
     function selecionaPrato(divNoThis){
-    const pratoAnterior = document.querySelector('.food .selecionado')
+    const pratoAnterior = document.querySelector('.food .selecionado');
+    checkAnterior = document.querySelector('.food .selecionado .check');
     if(pratoAnterior !== null){
-        pratoAnterior.classList.remove('selecionado')
+        pratoAnterior.classList.remove('selecionado');
+        checkAnterior.classList.add('escondido');
     }
 
     divNoThis.classList.add("selecionado");
+    checkAtual = divNoThis.children[3].children[1].classList.remove('escondido');
     const meuPrato = document.querySelector('.selecionado');
     nomeDoPrato = divNoThis.children[1].innerHTML;
     precoDoPrato = parseInt(divNoThis.children[3].children[0].innerHTML.replace('R$ ', ''));
@@ -27,10 +32,13 @@
 }
 function selecionaDrink(divNoThis){
     const drinkAnterior = document.querySelector('.drink .selecionado');
+    checkAnterior = document.querySelector('.drink .selecionado .check');
     if(drinkAnterior !== null){
         drinkAnterior.classList.remove('selecionado');
+        checkAnterior.classList.add('escondido');
     }
     divNoThis.classList.add("selecionado");
+    checkAtual = divNoThis.children[3].children[1].classList.remove('escondido');
     const meuDrink = document.querySelector('.selecionado');
     nomeDoDrink = divNoThis.children[1].innerHTML;
     precoDoDrink = parseInt(divNoThis.children[3].children[0].innerHTML.replace('R$ ', ''));
@@ -39,10 +47,14 @@ function selecionaDrink(divNoThis){
 }
 function selecionaSobremesa(divNoThis){
     const doceAnterior = document.querySelector('.dessert .selecionado');
-    if(doceAnterior !== null){
+    checkAnterior = document.querySelector('.dessert .selecionado .check');
+    console.log(checkAnterior);
+    if(doceAnterior !== null && checkAnterior !== null){
         doceAnterior.classList.remove('selecionado');
+        checkAnterior.classList.add('escondido');
     }
     divNoThis.classList.add("selecionado");
+    checkAtual = divNoThis.children[3].children[1].classList.remove('escondido');
     const minhaSobremesa = document.querySelector('.selecionado');
     nomeDaSobremesa = divNoThis.children[1].innerHTML;
     precoDaSobremesa = parseInt(divNoThis.children[3].children[0].innerHTML.replace('R$ ', ''));
@@ -56,7 +68,7 @@ function fecharPedido(){
             botao.disabled = false;
             botao.classList.add('fechar');
             valorTotal = precoDoPrato + precoDoDrink + precoDaSobremesa;
-            mandarPedido();    
+          
         }
 }
 function mandarPedido(){
