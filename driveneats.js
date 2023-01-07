@@ -10,7 +10,8 @@
     let nomeDaSobremesa;
     let valorTotal = 0;
     let mensagem;
-   
+    let mensagemCodificada;
+
     function selecionaPrato(divNoThis){
     const pratoAnterior = document.querySelector('.food .selecionado')
     if(pratoAnterior !== null){
@@ -55,19 +56,20 @@ function fecharPedido(){
             botao.disabled = false;
             botao.classList.add('fechar');
             valorTotal = precoDoPrato + precoDoDrink + precoDaSobremesa;
-            console.log(valorTotal);
-
             mandarPedido();    
         }
 }
 function mandarPedido(){
-    mensagem = `Olá, gostaria de fazer o pedido:
-    - Prato: ${nomeDoPrato}
-    - Bebida: ${nomeDoDrink}
-    - Sobremesa: ${nomeDaSobremesa}
-    Total: R$ ${valorTotal},00 `
-    let mensagemCodificada = encodeURI(mensagem);
-    
+    mensagem = `Olá, gostaria de fazer o *pedido*:
+    \n - *Prato*: ${nomeDoPrato}
+    \n - *Bebida*: ${nomeDoDrink}
+    \n - *Sobremesa*: ${nomeDaSobremesa}
+    \n - *Total*: R$ ${valorTotal},00 `
+    mensagemCodificada = encodeURI(mensagem);
+    enviar()
+}
+function enviar(){
+    window.open(`https://wa.me/?text=${mensagemCodificada}`)
 }
 
    
