@@ -2,9 +2,13 @@
     let prato;
     let drink;
     let sobremesa;
+    let precodoPrato;
+    let precodoDrink;
    
     function selecionaPrato(divNoThis){
     const pratoAnterior = document.querySelector('.food .selecionado')
+    console.log(divNoThis.children[1].innerHTML);
+    console.log(parseInt(divNoThis.children[3].children[0].innerHTML.replace('R$ ', '')))
     if(pratoAnterior !== null){
         pratoAnterior.classList.remove('selecionado')
     }
@@ -38,12 +42,12 @@ function selecionaSobremesa(divNoThis){
 function fecharPedido(){
     if(prato !== undefined && drink !== undefined && sobremesa !== undefined) {             
                const botao = document.querySelector('button');
-                botao.classList.add('fechar');
             botao.innerHTML = "Fechar pedido";
-     
-        
+            botao.disabled = false;
+            console.dir(botao)
+            botao.classList.add('fechar');
             }
-    
+            
 }
 
    
